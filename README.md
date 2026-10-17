@@ -55,3 +55,17 @@ Run `php -S 127.0.0.1:8080` from the project directory. Create a room using POST
 
 ## v1.2 language patch
 Language picker displays national flags (options have native tooltip language names). Latvian translations cover the visible UI and dynamically opened dialogs. Other languages retain their existing partial translations; no claim of full translations for those languages. Replace assets/app.js, assets/app.css, assets/i18n.js, index.html and sw.js. Clear browser cache or reload twice if an old service worker is active.
+
+
+## v1.3 additions
+- Sticky notes: double click to edit, drag to move, colors and text formatting.
+- Simple music staff object; double click to add pitched notes and durations (not full Music Writer integration).
+- Extra widgets: timer, clock, dice, polls, maths, link labels, lined/grid background.
+- Sidebar links to music-writer, book, translate and language apps.
+- Existing shared board storage is not included. Back it up and preserve it on deployment.
+
+
+### v1.5 UI update
+- Language dropdown uses SVG flags and localized language names; hidden original selector preserves translation events.
+- Brand icon replaced throughout header and PWA asset.
+- Existing PHP board storage and sharing unchanged.

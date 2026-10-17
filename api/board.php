@@ -38,7 +38,7 @@ if($action==='append') {
   if(!is_array($op)||!in_array($op['type']??'', ['upsert','delete','clear'],true)) fail(400,'Invalid operation type');
   if(($op['type']??'')==='upsert') {
    $obj=$op['object']??null;
-   if(!is_array($obj)||!preg_match('/^[a-zA-Z0-9_-]{5,60}$/D',(string)($obj['id']??''))||!in_array($obj['type']??'', ['stroke','rect','ellipse','text','note','arrow','image'],true)) fail(400,'Invalid board object');
+   if(!is_array($obj)||!preg_match('/^[a-zA-Z0-9_-]{5,60}$/D',(string)($obj['id']??''))||!in_array($obj['type']??'', ['stroke','rect','ellipse','text','note','arrow','image','music'],true)) fail(400,'Invalid board object');
    if(strlen(json_encode($obj))>2900000) fail(413,'Object too large');
   }
   if(($op['type']??'')==='delete' && !preg_match('/^[a-zA-Z0-9_-]{5,60}$/D',(string)($op['id']??''))) fail(400,'Invalid object ID');
